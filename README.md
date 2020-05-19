@@ -4,7 +4,7 @@ Object type detection using neural network classification algorithm.
 It detects whether the radar record belongs to a walking person, running person or stationary object like tree with little movement because of wind.
 
 The radar files are parsed and combined in a single .txt files by using PYTHON scripts below.
-Then MATLAB is running Neural Network Front and Back Propagation on radar files for classification. It detects each type with 100% accuracy over FFT records with 30 training examples per class. Even 15 examples per class high high accuracy.
+Then MATLAB is running Neural Network Front and Back Propagation on radar files for classification. It detects each type with 100% accuracy over FFT records with just 15 training examples per class.
 
 The example picture belongs to the movement of my car. Doppler shifts can be seen easily as well.
 The example FFT picture belongs to a running video. The peak moves from beginning to end. Run with radar_result folder to see.
