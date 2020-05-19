@@ -9,7 +9,7 @@ Then MATLAB is running Neural Network Front and Back Propagation on radar files 
 
 The example picture belongs to the movement a car. Doppler shifts can be seen easily as well.
 The example FFT picture belongs to a running video. The peak moves from beginning to end. Run with radar_result folder to see.
-I cannot upload unparsed data from radar to github. Therefore uploaded parsed and ready to use data in radar_result files in 2 parts in zip file. Put all .txt files to the same folder and name is as radar_result.
+I cannot upload unparsed data from radar to github. Therefore uploaded parsed and ready to use data in radar_result files in 2 parts in zip file. Put all .txt files under same folder named as radar_result.
 
 Matlab uses this radar_result folder's files for Neural Network classification as well.
 
