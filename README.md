@@ -8,7 +8,7 @@ The radar files are parsed and combined in a single .txt files by using PYTHON s
 Then MATLAB is running Neural Network Front and Back Propagation on radar files for classification. It detects each type with 100% accuracy over FFT records with just 15 training examples per class.
 
 The example picture belongs to a moving car. Doppler shifts can be seen easily as well.
-The example FFT picture belongs to a running video. The peak moves from beginning to end. Run with radar_result folder to see.
+The example FFT picture is one picture of a video of running. The peak moves from beginning to end. Run with radar_result folder to see.
 I cannot upload unparsed data from radar to github. Therefore uploaded parsed and ready to use data in radar_result files in 2 parts in zip file. Put all .txt files under same folder named as radar_result.
 
 Matlab uses this radar_result folder's files for Neural Network classification as well.
