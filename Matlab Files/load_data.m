@@ -16,8 +16,7 @@ NUMBER_OF_TYPE = 3;
 TRAINING_SET_SIZE = TRAININGSET_SIZE_EACH_TYPE * NUMBER_OF_TYPE; 
 TEST_SET_SIZE = TESTSET_SIZE_EACH_TYPE * NUMBER_OF_TYPE; 
 
-all_results = load('/Users/ck/Desktop/Workspace/Matlab Workspace/Radar_24GHz_Neural_Network/radar_result/abs_result.txt');
-%all_results = load('/Radar_24GHz_Neural_Network/radar_result/abs_result.txt');
+all_results = load('/radar_result/abs_result.txt');
 
 % Training set
 X = [all_results(1:15,:); all_results(31:45,:); all_results(61:75,:)];
