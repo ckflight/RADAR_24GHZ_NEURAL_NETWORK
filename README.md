@@ -18,9 +18,14 @@ PYTHON Files:
 
 MATLAB Files:
 1. main.m
-2. load_data.m , loads radar_result files
+2. load_data.m (change folder path) , loads radar_result files
 3. fmincg.m, lrCostFunction.m, sigmoid.m are all Neural Network related files.
 
 ![car_watermark](https://user-images.githubusercontent.com/61315249/82326657-d6e34300-99e5-11ea-8004-1b3b01aaef30.png)
 
 ![running](https://user-images.githubusercontent.com/61315249/82326898-37728000-99e6-11ea-909c-c5766b5d3f8d.png)
+
+![nn1](https://user-images.githubusercontent.com/61315249/82327504-2ece7980-99e7-11ea-908c-f69e4695effc.png)
+
+![nn2](https://user-images.githubusercontent.com/61315249/82327499-2c6c1f80-99e7-11ea-8b4b-2d39561f3492.png)
+
