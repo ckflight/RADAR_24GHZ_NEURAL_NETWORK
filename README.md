@@ -1,6 +1,6 @@
 # RADAR_24GHZ_NEURAL_NETWORK
 
-Python Radar record parse, fft video and waterfall plot and Matlab object type detection using neural network classification algorithm.
+Python Radar record parse, fft video and waterfall plot and Matlab object type detection using neural network classification algorithm. What i mean by FFT video is that, radar buffers FFT images during record time with step time between each new FFT image. Combination of each image is with a time step is simply a video.
 
 It detects whether the radar record belongs to a walking person, running person or stationary object like tree with little movement because of wind.
 
