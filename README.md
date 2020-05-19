@@ -1,5 +1,6 @@
 # RADAR_24GHZ_NEURAL_NETWORK
-Object type detection using neural network classification algorithm.
+
+Python Radar record parse, fft video and waterfall plot and Matlab object type detection using neural network classification algorithm.
 
 It detects whether the radar record belongs to a walking person, running person or stationary object like tree with little movement because of wind.
 
