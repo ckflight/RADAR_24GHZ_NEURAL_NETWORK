@@ -5,7 +5,7 @@ Python Radar record parse, fft video and waterfall plot and Matlab object type d
 It detects whether the radar record belongs to a walking person, running person or stationary object like tree with little movement because of wind.
 
 The radar files are parsed and combined in a single .txt files by using PYTHON scripts below.
-Then MATLAB is running Neural Network Front and Back Propagation on radar files for classification. It detects each type with 100% accuracy over FFT records with just 15 training examples per class.
+Then MATLAB is running Neural Network Front and Back Propagation on radar files for classification. For each class 30 records are split into 15 training set for Neural Network and 15 test set for measuring the accuracy. It detects each type with 100% accuracy over FFT records with just 15 training examples per class. In each class movement was at a different pase and direction. For example for running class: Person was running at different speeds each time and as direction from start point to end in one record and from end point to start in other one.
 
 The example Waterfall plot belongs to a moving car. Doppler shifts can be seen easily as well.
 The example FFT plot is one picture of a video of running person. The peak moves from beginning to end. Run with radar_result folder to see. 
