@@ -7,7 +7,7 @@ function [X, y, Z, t] = load_data()
 
 clear;clc;
 
-% I will use 25 of each type as training set and 5 for test data
+% I will use 15 of each type as training set and 15 for test data
 MAX_SIZE_EACH_TYPE = 30;
 TESTSET_SIZE_EACH_TYPE = 15;
 TRAININGSET_SIZE_EACH_TYPE = MAX_SIZE_EACH_TYPE - TESTSET_SIZE_EACH_TYPE;
