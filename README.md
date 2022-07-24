@@ -1,29 +1,40 @@
-# RADAR_24GHZ_NEURAL_NETWORK
+# Radar Object Type Detection Using Neural Network Algorithm
 
-Python Radar record parse, fft video and waterfall plot and Matlab object type detection using neural network classification algorithm. What i mean by FFT video is that, radar buffers FFT images during record time with step time between each new FFT image. Combination of each image with a time step is simply a video.
+## Project Details:
 
-It detects whether the radar record belongs to a walking person, running person or stationary object like tree with little movement because of wind.
+ * This repository implements a neural network algorithm. I wrote these Matlab scripts when i received **Machine Learning** certificate course by **Andrew Ng** from **Stanford  University**. Therefore the implementation is highly optimized for best speed results.
 
-The radar files are parsed and combined in a single .txt files by using PYTHON scripts below.
-Then MATLAB is running Neural Network Front and Back Propagation on radar files for classification. For each class 30 records are split into 15 training set for Neural Network and 15 test set for measuring the accuracy. It detects each type with 100% accuracy over FFT records with just 15 training examples per class. In each class movement was at a different pase and direction. For example for running class: Person was running at different speeds each time and as direction from start point to end in one record and from end point to start in other one.
+### Parse_Combine_Set.py
 
-The example Waterfall plot belongs to a moving car. Doppler shifts can be seen easily as well.
-The example FFT plot is one picture of a video of running person. The peak moves from beginning to end. Run with radar_result folder to see. 
+ * The radar that i used on this project had a different kind of data recording. It recorded file on different .txt files for N number of samples and each .txt file has a specific encoding along with other configuration data of the hardware. Therefore, the data needed to be parsed. This python script parses the data and combines them in one final .txt file. 
 
-Due to the upload size unparsed data of radar is not uploaded to github. Therefore i uploaded parsed and ready to use data in radar_result files in 2 parts in zip file. Put all .txt files under same folder named as radar_result.
+### Create_Training_Set.py
 
-Matlab uses this radar_result folder's files for Neural Network classification as well.
+ * This python script creates a training set to be used along with the Mathlab scripts.
 
-PYTHON Files:
-1.	Run Parse_Combine_Set.py to combine shots, Radar sends record with one file for each fft image for specified range
-2.	Run Create_Training_Set.py to create final training set from combined files to use with MATLAB
-3.	Use Plot_Training_Set.py to plot radar videos. Each record video is labeled for indicating if it is walk, run, car etc. 
-4.  Plot_Waterfall.py to see colormesh of the result. 
+### Plot_Training_Set.py
 
-MATLAB Files:
-1. main.m
-2. load_data.m (change folder path) , loads radar_result files
-3. fmincg.m, lrCostFunction.m, sigmoid.m are all Neural Network related files.
+ * Plots the training set for visualisation of the each FFT video of the Radar data. Each record video is labeled for indicating if it is walk, run, car etc. The objects can be seen at a specific distance and related frequency. What i mean by the FFT video is that, the radar buffers FFT images during record time with step time between each new FFT image. The combination of each image with a time step is simply a video. Therefore the Matlab plot is not a stationary image but, a video showing the movement of the objects detected by the radar. 
+ 
+ * **Example Screenshot** of the FFT plot is one picture of a video of running person. The peak moves from beginning to end. Run with radar_result folder to see.
+
+### Plot_Waterfall.py
+
+ * Plots the radar data in a waterfall format for different kind of visualisation.
+ 
+ * **Example Screenshot** of the Waterfall plot belongs to a moving car. Doppler shift effect can be seen easily as well. The Doppler shift is the effect that moving objects shift the frequency of the reflected signal. By checking the amount of frequency shift, the speed of the object can be detected. Earlier simpler radars used this principal to detect the speed of the moving objects without Frequency Modulation)
+
+### Matlab Files:
+
+ * Matlab scripts are running Neural Network Front and Back Propagation on the radar files for classification. It detects whether the radar record belongs to a    walking person, running person or stationary object like tree with little movement because of the wind. For each class 30 records are split into 15 training set for Neural Network and 15 test set for measuring the accuracy. It detects each type with 100% accuracy over FFT records with just 15 training examples per class. In each class the movement was at a different pace and direction. For example, for running class: Person was running at a different speed each time and as direction from start point to end in one record and from end point to start in the other one.
+ 
+ 1. **main.m**, main matlab script for running the algorithm
+ 2. **load_data.m** (change folder path) , loads radar_result files
+ 3. **fmincg.m**, **lrCostFunction.m**, **sigmoid.m** are all Neural Network related files.
+
+Due to the upload size unparsed data of radar is not uploaded to github. I just uploaded parsed and ready to use data in radar_result files in 2 parts in zip file. Put all .txt files under same folder and rename the folder as **radar_result**.
+
+Matlab uses this **radar_result** folder's files for Neural Network classification as well.
 
 ![car_watermark](https://user-images.githubusercontent.com/61315249/82326657-d6e34300-99e5-11ea-8004-1b3b01aaef30.png)
 
